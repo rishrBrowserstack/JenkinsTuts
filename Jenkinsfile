@@ -47,11 +47,7 @@ pipeline {
              steps {
                 echo 'Running Nightwatch + Cucumber tests...'
                 sh '''
-                    # Install test dependencies
-                    // npm install
-
                     # Run tests
-                    // npm run test  # Adjust if your command is different
                     npx nightwatch
                 '''
             }
