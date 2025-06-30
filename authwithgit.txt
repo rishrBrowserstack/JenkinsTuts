@@ -1,0 +1,4 @@
+ 1. create ssh keys on agent machine (where jobs will be running)
+ 2. now add the public key of that agent to the github
+ 3. now add proivate key of that agent to the controller dahsboard
+ 4. when creating new pipleline when u need the creds use those credntials.
