@@ -58,7 +58,7 @@ pipeline {
             steps {
                 echo 'Archiving test reports...'
                 // Adjust this path if needed
-                archiveArtifacts artifacts: '**', fingerprint: true
+                // archiveArtifacts artifacts: '**', fingerprint: true
             }
         }
     }
