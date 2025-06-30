@@ -14,14 +14,11 @@ Feature: Checking Basic URL and Saving Logs, Errors
 
     Examples:
     | LinkText                                                         | Expected Title                                                   | Expected URL                                                  |
-    | Big page with many elements                                      | Complicated Page - Ultimate QA                                   | https://ultimateqa.com/complicated-page                       |
-    | Fake Landing Page                                                | Fake landing page - Ultimate QA                                  | https://ultimateqa.com/fake-landing-page                      |
-    | Fake Pricing Page                                                | Fake pricing page - Ultimate QA                                  | https://ultimateqa.com/automation/fake-pricing-page/          |
-    | Fill out forms                                                   | Filling Out Forms - Ultimate QA                                  | https://ultimateqa.com/filling-out-forms/                     |
-    | Learn how to automate an application that evolves over time      | Sample Application Lifecycle - Sprint 1 - Ultimate QA            | https://ultimateqa.com/sample-application-lifecycle-sprint-1/ |
-    | Login automation                                                 | Sign In - UltimateQA                                             | https://courses.ultimateqa.com/users/sign_in                  |
-    | Interactions with simple elements                                | Simple HTML Elements For Automation - Ultimate QA                | https://ultimateqa.com/simple-html-elements-for-automation/   |
-
+    | About                                                            | Automation Practice Site - About Us                              | http://127.0.0.1:5000/about                                   |
+    | Contact                                                          | Automation Practice Site - Contact Us                            | http://127.0.0.1:5000/contact                                 |
+    | Sample Data                                                      | Automation Practice Site - Sample Data                           | http://127.0.0.1:5000/data                                    |
+    | 404 Test                                                         | Automation Practice Site - Page Not Found                        | http://127.0.0.1:5000/non-existent-page                       |
+   
 
   @savingLogs
   Scenario: Save Logs,Errors in a File/ show them on Console

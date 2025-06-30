@@ -40,9 +40,9 @@ module.exports = {
   test_settings: {
     default: {
       disable_error_log: false,
-      // launch_url: 'http://127.0.0.1:5000/',
-      launch_url:'https://ultimateqa.com/automation'
-      ,
+      launch_url: 'http://127.0.0.1:5000/',
+      // launch_url:'https://ultimateqa.com/automation',
+      
 
       screenshots: {
         enabled: false,

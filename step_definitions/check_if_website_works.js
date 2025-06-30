@@ -11,20 +11,41 @@ Given('i go to the home index', function() {
 
 });
 Then('verify home url', function(){
-  return browser.assert.titleEquals("Automation Practice - Ultimate QA");
+  return browser.assert.titleEquals("Automation Practice Site - Home");
 
 })
 
 
 // Verify Urls and Title
-When('I click on the link {string}', function(linkText) {
-  browser.element.findByText(linkText).click();
-})
+// When('I click on the link {string}', function(linkText) {
+//   browser.element.findByText(linkText).click();
+// })
 
-Then('Title is {string} and Url is {string}', function (expectedTitle, expectedUrl) {
-  browser.assert.titleEquals(expectedTitle);
-  browser.assert.urlEquals(expectedUrl);
+// Then('Title is {string} and Url is {string}', function (expectedTitle, expectedUrl) {
+//   browser.assert.titleEquals(expectedTitle);
+//   browser.assert.urlEquals(expectedUrl);
+// });
+
+
+
+// Scenario Outline: Verifying if the link works correctly
+Given('I click on the link {string}', async function (linkText) {
+  const selector = pageLocators[linkText];
+  if (!selector) {
+    throw new Error(`Locator not found for linkText: ${linkText}`);
+  }
+  // console.log(selector);
+  await browser.element.findByText(selector).click();
+
 });
+
+Then('Title is {string} and Url is {string}', async function (expectedTitle, expectedUrl) {
+  // Add a wait here as well, to ensure the new page has fully loaded
+  // and its title/URL are stable.
+    browser.assert.titleEquals(expectedTitle);
+    browser.assert.urlEquals(expectedUrl);
+});
+
 
 
 
@@ -41,5 +62,5 @@ Then("Save the Logs  in a text File",async function(){
 
 })
 Then("Show the Logs  in Console",function(){
-  console.log(browser.getLog('browser'));
+  // console.log(browser.getLog('browser'));
 })

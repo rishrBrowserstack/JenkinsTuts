@@ -36,7 +36,7 @@ pipeline {
                 echo 'Starting Flask server...'
                 sh '''
                     # Install dependencies if needed
-                    pip install -r requirements.txt
+                    // pip install -r requirements.txt
 
                     # Start server in background
                     nohup python src/serv.py > flask.log 2>&1 &
@@ -50,10 +50,11 @@ pipeline {
                 echo 'Running Nightwatch + Cucumber tests...'
                 sh '''
                     # Install test dependencies
-                    npm install
+                    // npm install
 
                     # Run tests
-                    npm run test  # Adjust if your command is different
+                    // npm run test  # Adjust if your command is different
+                    npx nightwatch
                 '''
             }
         }
