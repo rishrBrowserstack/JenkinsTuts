@@ -49,7 +49,7 @@ pipeline {
                 sh '''
                     # Run tests
                     npm install
-                    npx nightwatch
+                    npx nightwatch --reporter-output reports/
                 '''
             }
         }
