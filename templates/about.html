@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section id="about-section" class="py-10">
+    <h2 class="text-3xl font-semibold mb-4 text-center" id="about-heading">About Our Practice Site</h2>
+    <p class="mb-4 leading-relaxed">
+        This platform was built with the sole purpose of providing a reliable and stable environment for learning and practicing web automation. We understand the challenges of testing dynamic websites and aim to offer consistent elements for robust test automation scripts.
+    </p>
+    <p class="mb-4 leading-relaxed">
+        Our goal is to cover common UI patterns and element types that you'll frequently encounter in real-world applications. From simple text fields and buttons to more complex tables and messages, you'll find diverse elements to hone your automation skills.
+    </p>
+    <p class="leading-relaxed">
+        Feel free to navigate, interact, and build your test suites against these pages. We hope this resource proves invaluable in your journey to becoming an automation expert!
+    </p>
+    <div class="mt-8 text-center">
+        <a href="{{ url_for('home') }}" class="text-blue-300 hover:underline" id="back-to-home-link">← Back to Home</a>
+    </div>
+</section>
+{% endblock %}

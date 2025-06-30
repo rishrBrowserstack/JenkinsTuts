@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section id="home-section" class="text-center py-10">
+    <h2 class="text-3xl font-semibold mb-4" id="welcome-heading">Welcome to the Automation Practice Arena!</h2>
+    <p class="text-lg mb-6">This site is designed for practicing web automation testing. Explore the different pages to find various HTML elements and scenarios.</p>
+    <div class="space-x-4">
+        <a href="{{ url_for('contact') }}" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-lg transition-colors duration-200" id="contact-us-button">Contact Us Now!</a>
+        <a href="{{ url_for('data') }}" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-6 rounded-lg transition-colors duration-200" id="view-data-button">View Sample Data</a>
+    </div>
+</section>
+{% endblock %}

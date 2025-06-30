@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section id="error-404-section" class="text-center py-20">
+    <h2 class="text-6xl font-bold text-red-400 mb-4" id="error-code">404</h2>
+    <p class="text-2xl font-semibold mb-6" id="error-message">Oops! Page Not Found</p>
+    <p class="text-lg mb-8">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+    <a href="{{ url_for('home') }}" class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200" id="go-home-button">Go to Homepage</a>
+</section>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section id="data-section" class="py-10">
+    <h2 class="text-3xl font-semibold mb-6 text-center" id="data-heading">Sample User Data</h2>
+
+    {% if users %}
+    <div class="overflow-x-auto rounded-lg shadow-xl">
+        <table class="min-w-full bg-gray-700 border border-gray-600" id="user-table">
+            <thead>
+                <tr class="bg-gray-600 text-gray-200 uppercase text-sm leading-normal">
+                    <th class="py-3 px-6 text-left" id="table-header-id">ID</th>
+                    <th class="py-3 px-6 text-left" id="table-header-name">Name</th>
+                    <th class="py-3 px-6 text-left" id="table-header-email">Email</th>
+                    <th class="py-3 px-6 text-left" id="table-header-age">Age</th>
+                </tr>
+            </thead>
+            <tbody class="text-gray-300 text-sm font-light">
+                {% for user in users %}
+                <tr class="border-b border-gray-600 hover:bg-gray-600 transition-colors duration-150" id="user-row-{{ user.id }}">
+                    <td class="py-3 px-6 text-left whitespace-nowrap user-id">{{ user.id }}</td>
+                    <td class="py-3 px-6 text-left user-name">{{ user.name }}</td>
+                    <td class="py-3 px-6 text-left user-email">{{ user.email }}</td>
+                    <td class="py-3 px-6 text-left user-age">{{ user.age }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <p class="text-center text-xl text-gray-400">No user data available.</p>
+    {% endif %}
+
+    <div class="mt-8 text-center">
+        <a href="{{ url_for('home') }}" class="text-blue-300 hover:underline" id="back-to-home-link">← Back to Home</a>
+    </div>
+</section>
+{% endblock %}

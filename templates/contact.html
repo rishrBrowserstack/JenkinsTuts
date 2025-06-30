@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section id="contact-section" class="py-10">
+    <h2 class="text-3xl font-semibold mb-6 text-center" id="contact-heading">Contact Us</h2>
+
+    {% if message %}
+    <div id="status-message" class="bg-teal-500 text-white px-4 py-3 rounded-lg text-center mb-6 shadow-md" role="alert">
+        {{ message }}
+    </div>
+    {% endif %}
+
+    <form action="{{ url_for('contact') }}" method="POST" class="max-w-md mx-auto bg-gray-700 p-8 rounded-lg shadow-xl" id="contact-form">
+        <div class="mb-4">
+            <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Name:</label>
+            <input type="text" id="name" name="name" class="shadow appearance-none border border-gray-600 rounded w-full py-2 px-3 text-gray-900 leading-tight focus:outline-none focus:shadow-outline focus:border-blue-500" placeholder="Your Name" required>
+        </div>
+        <div class="mb-4">
+            <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email:</label>
+            <input type="email" id="email" name="email" class="shadow appearance-none border border-gray-600 rounded w-full py-2 px-3 text-gray-900 leading-tight focus:outline-none focus:shadow-outline focus:border-blue-500" placeholder="your@example.com" required>
+        </div>
+        <div class="mb-6">
+            <label for="message" class="block text-gray-300 text-sm font-bold mb-2">Message:</label>
+            <textarea id="message" name="message" rows="5" class="shadow appearance-none border border-gray-600 rounded w-full py-2 px-3 text-gray-900 leading-tight focus:outline-none focus:shadow-outline focus:border-blue-500" placeholder="Your message here..." required></textarea>
+        </div>
+        <div class="flex items-center justify-between">
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg focus:outline-none focus:shadow-outline transition-colors duration-200" id="submit-button">Send Message</button>
+            <button type="reset" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-6 rounded-lg focus:outline-none focus:shadow-outline transition-colors duration-200" id="reset-button">Reset</button>
+        </div>
+    </form>
+</section>
+{% endblock %}

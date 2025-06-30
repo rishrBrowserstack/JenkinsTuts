@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automation Practice Site - {{ title }}</title>
+    <!-- Tailwind CSS CDN for quick styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Basic custom styles for demonstration, mostly overridden by Tailwind */
+        .container {
+            max-width: 960px;
+        }
+        nav a {
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.2s ease-in-out;
+        }
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-500 to-purple-600 text-white min-h-screen flex flex-col items-center py-8">
+    <div class="container bg-gray-800 p-8 rounded-xl shadow-2xl w-full max-w-4xl">
+        <header class="mb-8 border-b-2 border-gray-700 pb-4">
+            <h1 class="text-4xl font-bold text-center mb-4">
+                <a href="{{ url_for('home') }}" class="text-white hover:text-blue-200 transition-colors duration-200" id="site-header-link">Automation Practice Site</a>
+            </h1>
+            <nav class="flex justify-center space-x-6 text-lg">
+                <a href="{{ url_for('home') }}" class="hover:bg-blue-700 px-4 py-2 rounded-lg" id="nav-home">Home</a>
+                <a href="{{ url_for('about') }}" class="hover:bg-blue-700 px-4 py-2 rounded-lg" id="nav-about">About</a>
+                <a href="{{ url_for('contact') }}" class="hover:bg-blue-700 px-4 py-2 rounded-lg" id="nav-contact">Contact</a>
+                <a href="{{ url_for('data') }}" class="hover:bg-blue-700 px-4 py-2 rounded-lg" id="nav-data">Sample Data</a>
+                <a href="/non-existent-page" class="hover:bg-red-700 px-4 py-2 rounded-lg" id="nav-404">404 Test</a>
+            </nav>
+        </header>
+
+        <main class="flex-grow">
+            {% block content %}{% endblock %}
+        </main>
+
+        <footer class="mt-8 pt-4 border-t-2 border-gray-700 text-center text-gray-400 text-sm">
+            <p>&copy; 2025 Automation Practice Site. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
