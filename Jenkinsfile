@@ -5,7 +5,7 @@ pipeline {
         stage('Hello') {
             steps {
                 echo 'Hello World'
-                echo "PATH variable: ${env.PATH}" 
+                echo "PATH variable: ${params}" 
             }
         }
     }
