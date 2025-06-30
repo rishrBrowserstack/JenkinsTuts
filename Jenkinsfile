@@ -9,7 +9,7 @@ pipeline {
     }
     environment {
         // Optional: set Python path or virtualenv
-        PATH = "/Users/rishabh.si@browserstack.com/Desktop/Projects/jenkinsTuts/env:${env.PATH}"
+        PATH = "/opt/homebrew/bin/npm:/Users/rishabh.si@browserstack.com/Desktop/Projects/jenkinsTuts/env:${env.PATH}"
     }
 
 
