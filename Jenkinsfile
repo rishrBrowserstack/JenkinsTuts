@@ -7,6 +7,10 @@ pipeline {
         choice(name: 'ENVIRONMENT', choices: ['dev', 'qa', 'prod'], description: 'Pick environment')
         booleanParam(name: 'DEBUG', defaultValue: true, description: 'Enable debug mode')
     }
+    environment {
+        // Optional: set Python path or virtualenv
+        PATH = "/Users/rishabh.si@browserstack.com/Desktop/Projects/jenkinsTuts/env:${env.PATH}"
+    }
 
 
     stages {
@@ -23,6 +27,42 @@ pipeline {
                 echo "Username: ${params.USERNAME}"
                 echo "Environment: ${params.ENVIRONMENT}"
                 echo "Debug mode: ${params.DEBUG}"
+            }
+        }
+
+
+        stage('Start the Flask Server'){
+            steps{
+                echo 'Starting Flask server...'
+                sh '''
+                    # Install dependencies if needed
+                    pip install -r requirements.txt
+
+                    # Start server in background
+                    nohup python src/serv.py > flask.log 2>&1 &
+                '''
+            }
+        }
+
+
+        stage('Run UI Tests'){
+             steps {
+                echo 'Running Nightwatch + Cucumber tests...'
+                sh '''
+                    # Install test dependencies
+                    npm install
+
+                    # Run tests
+                    npm run test  # Adjust if your command is different
+                '''
+            }
+        }
+
+        stage('Save Reports') {
+            steps {
+                echo 'Archiving test reports...'
+                // Adjust this path if needed
+                archiveArtifacts artifacts: 'reports/**', fingerprint: true
             }
         }
     }

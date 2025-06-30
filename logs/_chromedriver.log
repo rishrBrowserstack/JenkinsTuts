@@ -1,0 +1,807 @@
+Starting ChromeDriver 138.0.7204.49 (d2b48fd5f7813ed477a2d68fa232b8178fa4fb1e-refs/branch-heads/7204@{#1814}) on port 52175
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully on port 52175.
+[1751278002.548][INFO]: [320123768952bf65e3e54cd131ffab34] COMMAND InitSession {
+   "capabilities": {
+      "alwaysMatch": {
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "binary": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+         }
+      },
+      "firstMatch": [ {
+      } ]
+   }
+}
+[1751278002.548][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1751278002.549][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1751278002.549][INFO]: ChromeDriver supports communication with Chrome via pipes. This is more reliable and more secure.
+[1751278002.549][INFO]: Use the --remote-debugging-pipe Chrome switch instead of the default --remote-debugging-port to enable this communication mode.
+[1751278002.549][INFO]: Launching chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --allow-pre-commit-input --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-automation --enable-logging=stderr --log-level=0 --no-first-run --no-service-autorun --password-store=basic --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir=/var/folders/_5/gcf061d54tn82w0g4981c7g00000gp/T/.org.chromium.Chromium.BSgSqy data:,
+
+DevTools listening on ws://127.0.0.1:52181/devtools/browser/d1b5ae2b-6da2-4af8-ae83-e64417cdfba2
+[1751278002.764][DEBUG]: DevTools HTTP Request: http://localhost:52181/json/version
+[1751278003.056][DEBUG]: DevTools HTTP Response: {
+   "Browser": "Chrome/138.0.7204.49",
+   "Protocol-Version": "1.3",
+   "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+   "V8-Version": "13.8.258.19",
+   "WebKit-Version": "537.36 (@d2b48fd5f7813ed477a2d68fa232b8178fa4fb1e)",
+   "webSocketDebuggerUrl": "ws://localhost:52181/devtools/browser/d1b5ae2b-6da2-4af8-ae83-e64417cdfba2"
+}
+
+[1751278003.056][DEBUG]: DevTools HTTP Request: http://localhost:52181/json/list
+[1751278003.084][DEBUG]: DevTools HTTP Response: [ {
+   "description": "",
+   "devtoolsFrontendUrl": "https://chrome-devtools-frontend.appspot.com/serve_rev/@d2b48fd5f7813ed477a2d68fa232b8178fa4fb1e/inspector.html?ws=localhost:52181/devtools/page/F0EA5B7562DA9AFF86EABC3995227FBF",
+   "id": "F0EA5B7562DA9AFF86EABC3995227FBF",
+   "title": "",
+   "type": "page",
+   "url": "data:,",
+   "webSocketDebuggerUrl": "ws://localhost:52181/devtools/page/F0EA5B7562DA9AFF86EABC3995227FBF"
+} ]
+
+[1751278003.085][INFO]: resolved localhost to ["127.0.0.1","::1"]
+[1751278003.086][DEBUG]: DevTools WebSocket Command: Target.getTargets (id=1) (session_id=) browser {
+   "filter": [ {
+      "exclude": true,
+      "type": "browser"
+   }, {
+      "exclude": true,
+      "type": "page"
+   }, {
+      "exclude": false
+   } ]
+}
+[1751278003.087][DEBUG]: DevTools WebSocket Response: Target.getTargets (id=1) (session_id=) browser {
+   "targetInfos": [ {
+      "attached": false,
+      "browserContextId": "04B52E6D19ED7066EC7051430936C919",
+      "canAccessOpener": false,
+      "targetId": "07B1BC9965F3EACE926DC9DF70D6E9B4",
+      "title": "",
+      "type": "tab",
+      "url": "data:,"
+   } ]
+}
+[1751278003.087][DEBUG]: DevTools WebSocket Command: Target.attachToTarget (id=2) (session_id=) browser {
+   "flatten": true,
+   "targetId": "07B1BC9965F3EACE926DC9DF70D6E9B4"
+}
+[1751278003.089][DEBUG]: DevTools WebSocket Event: Target.attachedToTarget (session_id=) browser {
+   "sessionId": "E263FC0BD8E3E473BFCB29E6CD9B9D83",
+   "targetInfo": {
+      "attached": true,
+      "browserContextId": "04B52E6D19ED7066EC7051430936C919",
+      "canAccessOpener": false,
+      "targetId": "07B1BC9965F3EACE926DC9DF70D6E9B4",
+      "title": "",
+      "type": "tab",
+      "url": "data:,"
+   },
+   "waitingForDebugger": false
+}
+[1751278003.089][DEBUG]: DevTools WebSocket Response: Target.attachToTarget (id=2) (session_id=) browser {
+   "sessionId": "E263FC0BD8E3E473BFCB29E6CD9B9D83"
+}
+[1751278003.089][DEBUG]: DevTools WebSocket Command: Target.setAutoAttach (id=3) (session_id=E263FC0BD8E3E473BFCB29E6CD9B9D83) 07B1BC9965F3EACE926DC9DF70D6E9B4 {
+   "autoAttach": true,
+   "flatten": true,
+   "waitForDebuggerOnStart": false
+}
+[1751278003.091][DEBUG]: DevTools WebSocket Event: Target.attachedToTarget (session_id=E263FC0BD8E3E473BFCB29E6CD9B9D83) 07B1BC9965F3EACE926DC9DF70D6E9B4 {
+   "sessionId": "8B4744CBCA53B2670B61E83B680C3CDF",
+   "targetInfo": {
+      "attached": true,
+      "browserContextId": "04B52E6D19ED7066EC7051430936C919",
+      "canAccessOpener": false,
+      "targetId": "F0EA5B7562DA9AFF86EABC3995227FBF",
+      "title": "data:,",
+      "type": "page",
+      "url": "data:,"
+   },
+   "waitingForDebugger": false
+}
+[1751278003.091][DEBUG]: DevTools WebSocket Command: Page.enable (id=4) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+}
+[1751278003.091][DEBUG]: DevTools WebSocket Command: Page.addScriptToEvaluateOnNewDocument (id=5) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "source": "(function () {window.cdc_adoQpoasnfa76pfcZLmcfl_Array = window.Array;window.cdc_adoQpoasnfa76pfcZLmcfl_Object = window.Object;window.cdc_adoQpoasnfa76pfcZLmcfl_Promise = window.Promise;window.cdc_a..."
+}
+[1751278003.091][DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=6) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "expression": "(function () {window.cdc_adoQpoasnfa76pfcZLmcfl_Array = window.Array;window.cdc_adoQpoasnfa76pfcZLmcfl_Object = window.Object;window.cdc_adoQpoasnfa76pfcZLmcfl_Promise = window.Promise;window.cdc_a..."
+}
+[1751278003.091][DEBUG]: DevTools WebSocket Command: Log.enable (id=7) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+}
+[1751278003.091][DEBUG]: DevTools WebSocket Command: Target.setAutoAttach (id=8) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "autoAttach": true,
+   "flatten": true,
+   "waitForDebuggerOnStart": false
+}
+[1751278003.091][DEBUG]: DevTools WebSocket Response: Target.setAutoAttach (id=3) (session_id=E263FC0BD8E3E473BFCB29E6CD9B9D83) 07B1BC9965F3EACE926DC9DF70D6E9B4 {
+}
+[1751278003.092][DEBUG]: DevTools WebSocket Response: Page.enable (id=4) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+}
+[1751278003.094][DEBUG]: DevTools WebSocket Response: Page.addScriptToEvaluateOnNewDocument (id=5) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "identifier": "1"
+}
+[1751278003.094][DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=6) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "result": {
+      "type": "undefined"
+   }
+}
+[1751278003.094][DEBUG]: DevTools WebSocket Response: Log.enable (id=7) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+}
+[1751278003.094][DEBUG]: DevTools WebSocket Response: Target.setAutoAttach (id=8) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+}
+[1751278003.094][DEBUG]: DevTools WebSocket Command: Runtime.enable (id=9) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+}
+[1751278003.102][DEBUG]: DevTools WebSocket Event: Runtime.executionContextCreated (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "context": {
+      "auxData": {
+         "frameId": "F0EA5B7562DA9AFF86EABC3995227FBF",
+         "isDefault": true,
+         "type": "default"
+      },
+      "id": 1,
+      "name": "",
+      "origin": "://",
+      "uniqueId": "-6809834092003973630.-2157605798110797917"
+   }
+}
+[1751278003.102][DEBUG]: DevTools WebSocket Response: Runtime.enable (id=9) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+}
+[1751278003.102][DEBUG]: DevTools WebSocket Command: Runtime.enable (id=10) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+}
+[1751278003.103][DEBUG]: DevTools WebSocket Response: Runtime.enable (id=10) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+}
+[1751278003.103][INFO]: [320123768952bf65e3e54cd131ffab34] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": false,
+      "browserName": "chrome",
+      "browserVersion": "138.0.7204.49",
+      "chrome": {
+         "chromedriverVersion": "138.0.7204.49 (d2b48fd5f7813ed477a2d68fa232b8178fa4fb1e-refs/branch-heads/7204@{#1814})",
+         "userDataDir": "/var/folders/_5/gcf061d54tn82w0g4981c7g00000gp/T/.org.chromium.Chromium.BSgSqy"
+      },
+      "fedcm:accounts": true,
+      "goog:chromeOptions": {
+         "debuggerAddress": "localhost:52181"
+      },
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "normal",
+      "platformName": "mac",
+      "proxy": {
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 300000,
+         "script": 30000
+      },
+      "unhandledPromptBehavior": "dismiss and notify",
+      "webauthn:extension:credBlob": true,
+      "webauthn:extension:largeBlob": true,
+      "webauthn:extension:minPinLength": true,
+      "webauthn:extension:prf": true,
+      "webauthn:virtualAuthenticators": true
+   },
+   "sessionId": "320123768952bf65e3e54cd131ffab34"
+}
+[1751278003.106][INFO]: [320123768952bf65e3e54cd131ffab34] COMMAND Navigate {
+   "url": "https://ultimateqa.com/automation/"
+}
+[1751278003.106][INFO]: Waiting for pending navigations...
+[1751278003.106][DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=11) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "expression": "1"
+}
+[1751278003.106][DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=11) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "result": {
+      "description": "1",
+      "type": "number",
+      "value": 1
+   }
+}
+[1751278003.106][DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=12) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "expression": "document",
+   "objectGroup": "7ea0018c-5dbc-4977-964a-809fc03c03d7"
+}
+[1751278003.107][DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=12) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "result": {
+      "className": "HTMLDocument",
+      "description": "#document",
+      "objectId": "-5547395080787425679.1.1",
+      "subtype": "node",
+      "type": "object"
+   }
+}
+[1751278003.107][DEBUG]: DevTools WebSocket Command: DOM.describeNode (id=13) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "objectId": "-5547395080787425679.1.1"
+}
+[1751278003.107][DEBUG]: DevTools WebSocket Response: DOM.describeNode (id=13) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "node": {
+      "backendNodeId": 1,
+      "baseURL": "data:,",
+      "childNodeCount": 1,
+      "compatibilityMode": "NoQuirksMode",
+      "documentURL": "data:,",
+      "localName": "",
+      "nodeId": 0,
+      "nodeName": "#document",
+      "nodeType": 9,
+      "nodeValue": "",
+      "xmlVersion": ""
+   }
+}
+[1751278003.107][DEBUG]: DevTools WebSocket Command: Runtime.releaseObjectGroup (id=14) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "objectGroup": "7ea0018c-5dbc-4977-964a-809fc03c03d7"
+}
+[1751278003.107][DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=15) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "awaitPromise": false,
+   "expression": "document.readyState",
+   "returnByValue": true,
+   "uniqueContextId": "-6809834092003973630.-2157605798110797917"
+}
+[1751278003.107][DEBUG]: DevTools WebSocket Response: Runtime.releaseObjectGroup (id=14) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+}
+[1751278003.107][DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=15) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "result": {
+      "type": "string",
+      "value": "complete"
+   }
+}
+[1751278003.107][INFO]: Done waiting for pending navigations. Status: ok
+[1751278003.107][DEBUG]: DevTools WebSocket Command: Page.navigate (id=16) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "url": "https://ultimateqa.com/automation/"
+}
+[1751278003.110][DEBUG]: DevTools WebSocket Event: Page.frameStartedNavigating (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "frameId": "F0EA5B7562DA9AFF86EABC3995227FBF",
+   "loaderId": "C560E028E11303F053EA9289525180A2",
+   "navigationType": "differentDocument",
+   "url": "https://ultimateqa.com/automation/"
+}
+[1751278003.110][DEBUG]: DevTools WebSocket Event: Page.frameStartedLoading (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "frameId": "F0EA5B7562DA9AFF86EABC3995227FBF"
+}
+[1751278004.683][DEBUG]: DevTools WebSocket Response: Page.navigate (id=16) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "frameId": "F0EA5B7562DA9AFF86EABC3995227FBF",
+   "loaderId": "C560E028E11303F053EA9289525180A2"
+}
+[1751278004.683][DEBUG]: DevTools WebSocket Event: Runtime.executionContextsCleared (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+}
+[1751278004.683][DEBUG]: DevTools WebSocket Event: Runtime.executionContextsCleared (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+}
+[1751278004.683][DEBUG]: DevTools WebSocket Event: Page.frameNavigated (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "frame": {
+      "adFrameStatus": {
+         "adFrameType": "none"
+      },
+      "crossOriginIsolatedContextType": "NotIsolated",
+      "domainAndRegistry": "ultimateqa.com",
+      "gatedAPIFeatures": [  ],
+      "id": "F0EA5B7562DA9AFF86EABC3995227FBF",
+      "loaderId": "C560E028E11303F053EA9289525180A2",
+      "mimeType": "text/html",
+      "secureContextType": "Secure",
+      "securityOrigin": "https://ultimateqa.com",
+      "securityOriginDetails": {
+         "isLocalhost": false
+      },
+      "url": "https://ultimateqa.com/automation/"
+   },
+   "type": "Navigation"
+}
+[1751278004.683][INFO]: Waiting for pending navigations...
+[1751278004.683][INFO]: Done waiting for pending navigations. Status: ok
+[1751278004.683][INFO]: [320123768952bf65e3e54cd131ffab34] RESPONSE Navigate
+[1751278004.687][INFO]: [320123768952bf65e3e54cd131ffab34] COMMAND GetTitle {
+}
+[1751278004.687][INFO]: Waiting for pending navigations...
+[1751278004.687][INFO]: Done waiting for pending navigations. Status: ok
+[1751278004.687][DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=17) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+}
+[1751278004.688][DEBUG]: DevTools WebSocket Event: Runtime.executionContextCreated (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "context": {
+      "auxData": {
+         "frameId": "F0EA5B7562DA9AFF86EABC3995227FBF",
+         "isDefault": true,
+         "type": "default"
+      },
+      "id": 1,
+      "name": "",
+      "origin": "https://ultimateqa.com",
+      "uniqueId": "-3495404905803633709.8172257323281614293"
+   }
+}
+[1751278004.692][DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=17) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "frameTree": {
+      "frame": {
+         "adFrameStatus": {
+            "adFrameType": "none"
+         },
+         "crossOriginIsolatedContextType": "NotIsolated",
+         "domainAndRegistry": "ultimateqa.com",
+         "gatedAPIFeatures": [  ],
+         "id": "F0EA5B7562DA9AFF86EABC3995227FBF",
+         "loaderId": "C560E028E11303F053EA9289525180A2",
+         "mimeType": "text/html",
+         "secureContextType": "Secure",
+         "securityOrigin": "https://ultimateqa.com",
+         "securityOriginDetails": {
+            "isLocalhost": false
+         },
+         "url": "https://ultimateqa.com/automation/"
+      }
+   }
+}
+[1751278004.692][DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=18) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+}
+[1751278004.694][DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=18) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "frameTree": {
+      "frame": {
+         "adFrameStatus": {
+            "adFrameType": "none"
+         },
+         "crossOriginIsolatedContextType": "NotIsolated",
+         "domainAndRegistry": "ultimateqa.com",
+         "gatedAPIFeatures": [  ],
+         "id": "F0EA5B7562DA9AFF86EABC3995227FBF",
+         "loaderId": "C560E028E11303F053EA9289525180A2",
+         "mimeType": "text/html",
+         "secureContextType": "Secure",
+         "securityOrigin": "https://ultimateqa.com",
+         "securityOriginDetails": {
+            "isLocalhost": false
+         },
+         "url": "https://ultimateqa.com/automation/"
+      }
+   }
+}
+[1751278004.694][DEBUG]: DevTools WebSocket Command: Runtime.callFunctionOn (id=19) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "arguments": [  ],
+   "awaitPromise": true,
+   "functionDeclaration": "function(){ return (function() { // Copyright 2012 The Chromium Authors\n// Use of this source code is governed by a BSD-style license that can be\n// found in the LICENSE file.\n\n/**\n * Enum for WebD...",
+   "serializationOptions": {
+      "serialization": "deep"
+   },
+   "uniqueContextId": "-3495404905803633709.8172257323281614293"
+}
+[1751278004.696][DEBUG]: DevTools WebSocket Response: Runtime.callFunctionOn (id=19) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "result": {
+      "className": "Array",
+      "deepSerializedValue": {
+         "type": "array",
+         "value": [ {
+            "type": "string",
+            "value": "{\"status\":0,\"value\":\"\"}"
+         } ]
+      },
+      "description": "Array(1)",
+      "objectId": "-5344014423528793159.1.1",
+      "subtype": "array",
+      "type": "object"
+   }
+}
+[1751278004.696][INFO]: Waiting for pending navigations...
+[1751278004.696][DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=20) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "expression": "1"
+}
+[1751278004.696][DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=20) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "result": {
+      "description": "1",
+      "type": "number",
+      "value": 1
+   }
+}
+[65078:322908:0630/153645.052523:INFO:CONSOLE:2] "JQMIGRATE: Migrate is installed, version 3.4.1", source: https://ultimateqa.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1 (2)
+[1751278005.053][DEBUG]: DevTools WebSocket Event: Runtime.consoleAPICalled (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "args": [ {
+      "type": "string",
+      "value": "JQMIGRATE: Migrate is installed, version 3.4.1"
+   } ],
+   "executionContextId": 1,
+   "stackTrace": {
+      "callFrames": [ {
+         "columnNumber": 980,
+         "functionName": "",
+         "lineNumber": 1,
+         "scriptId": "14",
+         "url": "https://ultimateqa.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
+      }, {
+         "columnNumber": 261,
+         "functionName": "",
+         "lineNumber": 1,
+         "scriptId": "14",
+         "url": "https://ultimateqa.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
+      }, {
+         "columnNumber": 278,
+         "functionName": "",
+         "lineNumber": 1,
+         "scriptId": "14",
+         "url": "https://ultimateqa.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
+      } ]
+   },
+   "timestamp": 1.751278005051322e+12,
+   "type": "log"
+}
+[1751278005.053][DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=21) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "expression": "1"
+}
+[1751278005.058][DEBUG]: DevTools WebSocket Event: Page.domContentEventFired (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "timestamp": 14416.148102
+}
+[1751278005.061][DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=21) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "result": {
+      "description": "1",
+      "type": "number",
+      "value": 1
+   }
+}
+[1751278005.157][DEBUG]: DevTools WebSocket Event: Page.loadEventFired (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "timestamp": 14416.246784
+}
+[1751278005.157][DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=22) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "awaitPromise": false,
+   "expression": "document.readyState",
+   "returnByValue": true,
+   "uniqueContextId": "-3495404905803633709.8172257323281614293"
+}
+[1751278005.158][DEBUG]: DevTools WebSocket Event: Page.frameStoppedLoading (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "frameId": "F0EA5B7562DA9AFF86EABC3995227FBF"
+}
+[1751278005.158][DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=22) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "result": {
+      "type": "string",
+      "value": "complete"
+   }
+}
+[1751278005.158][DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=23) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "expression": "1"
+}
+[1751278005.158][DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=23) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "result": {
+      "description": "1",
+      "type": "number",
+      "value": 1
+   }
+}
+[1751278005.158][INFO]: Done waiting for pending navigations. Status: ok
+[1751278005.158][INFO]: [320123768952bf65e3e54cd131ffab34] RESPONSE GetTitle ""
+[1751278005.664][INFO]: [320123768952bf65e3e54cd131ffab34] COMMAND GetTitle {
+}
+[1751278005.664][INFO]: Waiting for pending navigations...
+[1751278005.664][DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=24) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "expression": "1"
+}
+[1751278005.665][DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=24) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "result": {
+      "description": "1",
+      "type": "number",
+      "value": 1
+   }
+}
+[1751278005.665][INFO]: Done waiting for pending navigations. Status: ok
+[1751278005.665][DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=25) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+}
+[1751278005.665][DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=25) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "frameTree": {
+      "frame": {
+         "adFrameStatus": {
+            "adFrameType": "none"
+         },
+         "crossOriginIsolatedContextType": "NotIsolated",
+         "domainAndRegistry": "ultimateqa.com",
+         "gatedAPIFeatures": [  ],
+         "id": "F0EA5B7562DA9AFF86EABC3995227FBF",
+         "loaderId": "C560E028E11303F053EA9289525180A2",
+         "mimeType": "text/html",
+         "secureContextType": "Secure",
+         "securityOrigin": "https://ultimateqa.com",
+         "securityOriginDetails": {
+            "isLocalhost": false
+         },
+         "url": "https://ultimateqa.com/automation/"
+      }
+   }
+}
+[1751278005.665][DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=26) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+}
+[1751278005.666][DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=26) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "frameTree": {
+      "frame": {
+         "adFrameStatus": {
+            "adFrameType": "none"
+         },
+         "crossOriginIsolatedContextType": "NotIsolated",
+         "domainAndRegistry": "ultimateqa.com",
+         "gatedAPIFeatures": [  ],
+         "id": "F0EA5B7562DA9AFF86EABC3995227FBF",
+         "loaderId": "C560E028E11303F053EA9289525180A2",
+         "mimeType": "text/html",
+         "secureContextType": "Secure",
+         "securityOrigin": "https://ultimateqa.com",
+         "securityOriginDetails": {
+            "isLocalhost": false
+         },
+         "url": "https://ultimateqa.com/automation/"
+      }
+   }
+}
+[1751278005.666][DEBUG]: DevTools WebSocket Command: Runtime.callFunctionOn (id=27) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "arguments": [  ],
+   "awaitPromise": true,
+   "functionDeclaration": "function(){ return (function() { // Copyright 2012 The Chromium Authors\n// Use of this source code is governed by a BSD-style license that can be\n// found in the LICENSE file.\n\n/**\n * Enum for WebD...",
+   "serializationOptions": {
+      "serialization": "deep"
+   },
+   "uniqueContextId": "-3495404905803633709.8172257323281614293"
+}
+[1751278005.667][DEBUG]: DevTools WebSocket Response: Runtime.callFunctionOn (id=27) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "result": {
+      "className": "Array",
+      "deepSerializedValue": {
+         "type": "array",
+         "value": [ {
+            "type": "string",
+            "value": "{\"status\":0,\"value\":\"Automation Practice - Ultimate QA\"}"
+         } ]
+      },
+      "description": "Array(1)",
+      "objectId": "-5344014423528793159.1.2",
+      "subtype": "array",
+      "type": "object"
+   }
+}
+[1751278005.667][INFO]: Waiting for pending navigations...
+[1751278005.667][DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=28) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "expression": "1"
+}
+[1751278005.668][DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=28) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "result": {
+      "description": "1",
+      "type": "number",
+      "value": 1
+   }
+}
+[1751278005.668][INFO]: Done waiting for pending navigations. Status: ok
+[1751278005.668][INFO]: [320123768952bf65e3e54cd131ffab34] RESPONSE GetTitle "Automation Practice - Ultimate QA"
+[1751278005.674][INFO]: [320123768952bf65e3e54cd131ffab34] COMMAND Navigate {
+   "url": "https://ultimateqa.com/automation/"
+}
+[1751278005.674][INFO]: Waiting for pending navigations...
+[1751278005.674][DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=29) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "expression": "1"
+}
+[1751278005.674][DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=29) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "result": {
+      "description": "1",
+      "type": "number",
+      "value": 1
+   }
+}
+[1751278005.674][INFO]: Done waiting for pending navigations. Status: ok
+[1751278005.674][DEBUG]: DevTools WebSocket Command: Page.navigate (id=30) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "url": "https://ultimateqa.com/automation/"
+}
+[1751278005.678][DEBUG]: DevTools WebSocket Event: Page.frameStartedNavigating (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "frameId": "F0EA5B7562DA9AFF86EABC3995227FBF",
+   "loaderId": "86F92348159A9E687354DFBBE9624DDD",
+   "navigationType": "differentDocument",
+   "url": "https://ultimateqa.com/automation/"
+}
+[1751278005.678][DEBUG]: DevTools WebSocket Event: Page.frameStartedLoading (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "frameId": "F0EA5B7562DA9AFF86EABC3995227FBF"
+}
+[1751278005.682][DEBUG]: DevTools WebSocket Response: Page.navigate (id=30) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "frameId": "F0EA5B7562DA9AFF86EABC3995227FBF",
+   "loaderId": "86F92348159A9E687354DFBBE9624DDD"
+}
+[1751278005.682][INFO]: Waiting for pending navigations...
+[1751278005.682][DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=31) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "expression": "1"
+}
+[1751278005.690][DEBUG]: DevTools WebSocket Event: Runtime.executionContextsCleared (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+}
+[1751278005.691][DEBUG]: DevTools WebSocket Event: Page.frameNavigated (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "frame": {
+      "adFrameStatus": {
+         "adFrameType": "none"
+      },
+      "crossOriginIsolatedContextType": "NotIsolated",
+      "domainAndRegistry": "ultimateqa.com",
+      "gatedAPIFeatures": [  ],
+      "id": "F0EA5B7562DA9AFF86EABC3995227FBF",
+      "loaderId": "86F92348159A9E687354DFBBE9624DDD",
+      "mimeType": "text/html",
+      "secureContextType": "Secure",
+      "securityOrigin": "https://ultimateqa.com",
+      "securityOriginDetails": {
+         "isLocalhost": false
+      },
+      "url": "https://ultimateqa.com/automation/"
+   },
+   "type": "Navigation"
+}
+[1751278005.696][DEBUG]: DevTools WebSocket Event: Runtime.executionContextCreated (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "context": {
+      "auxData": {
+         "frameId": "F0EA5B7562DA9AFF86EABC3995227FBF",
+         "isDefault": true,
+         "type": "default"
+      },
+      "id": 2,
+      "name": "",
+      "origin": "https://ultimateqa.com",
+      "uniqueId": "-1017681965242121912.3654958018462192790"
+   }
+}
+[65078:322908:0630/153645.703963:INFO:CONSOLE:2] "JQMIGRATE: Migrate is installed, version 3.4.1", source: https://ultimateqa.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1 (2)
+[1751278005.704][DEBUG]: DevTools WebSocket Event: Runtime.consoleAPICalled (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "args": [ {
+      "type": "string",
+      "value": "JQMIGRATE: Migrate is installed, version 3.4.1"
+   } ],
+   "executionContextId": 2,
+   "stackTrace": {
+      "callFrames": [ {
+         "columnNumber": 980,
+         "functionName": "",
+         "lineNumber": 1,
+         "scriptId": "14",
+         "url": "https://ultimateqa.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
+      }, {
+         "columnNumber": 261,
+         "functionName": "",
+         "lineNumber": 1,
+         "scriptId": "14",
+         "url": "https://ultimateqa.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
+      }, {
+         "columnNumber": 278,
+         "functionName": "",
+         "lineNumber": 1,
+         "scriptId": "14",
+         "url": "https://ultimateqa.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
+      } ]
+   },
+   "timestamp": 1.751278005703864e+12,
+   "type": "log"
+}
+[1751278005.714][DEBUG]: DevTools WebSocket Event: Page.domContentEventFired (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "timestamp": 14416.804501
+}
+[1751278005.714][DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=31) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "result": {
+      "description": "1",
+      "type": "number",
+      "value": 1
+   }
+}
+[1751278005.719][DEBUG]: DevTools WebSocket Event: Page.loadEventFired (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "timestamp": 14416.810239
+}
+[1751278005.719][DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=32) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "awaitPromise": false,
+   "expression": "document.readyState",
+   "returnByValue": true,
+   "uniqueContextId": "-1017681965242121912.3654958018462192790"
+}
+[1751278005.720][DEBUG]: DevTools WebSocket Event: Page.frameStoppedLoading (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "frameId": "F0EA5B7562DA9AFF86EABC3995227FBF"
+}
+[1751278005.720][DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=32) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "result": {
+      "type": "string",
+      "value": "complete"
+   }
+}
+[1751278005.720][DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=33) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "expression": "1"
+}
+[1751278005.720][DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=33) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "result": {
+      "description": "1",
+      "type": "number",
+      "value": 1
+   }
+}
+[1751278005.720][INFO]: Done waiting for pending navigations. Status: ok
+[1751278005.720][INFO]: [320123768952bf65e3e54cd131ffab34] RESPONSE Navigate
+[1751278005.724][INFO]: [320123768952bf65e3e54cd131ffab34] COMMAND GetLog {
+   "type": "browser"
+}
+[1751278005.724][DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=34) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "awaitPromise": false,
+   "expression": "1",
+   "returnByValue": true
+}
+[1751278005.724][DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=34) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "result": {
+      "description": "1",
+      "type": "number",
+      "value": 1
+   }
+}
+[1751278005.724][INFO]: [320123768952bf65e3e54cd131ffab34] RESPONSE GetLog [  ]
+[1751278005.731][INFO]: [320123768952bf65e3e54cd131ffab34] COMMAND GetLog {
+   "type": "browser"
+}
+[1751278005.731][DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=35) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "awaitPromise": false,
+   "expression": "1",
+   "returnByValue": true
+}
+[1751278005.731][DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=35) (session_id=8B4744CBCA53B2670B61E83B680C3CDF) F0EA5B7562DA9AFF86EABC3995227FBF {
+   "result": {
+      "description": "1",
+      "type": "number",
+      "value": 1
+   }
+}
+[1751278005.731][INFO]: [320123768952bf65e3e54cd131ffab34] RESPONSE GetLog [  ]
+[1751278005.732][INFO]: [320123768952bf65e3e54cd131ffab34] COMMAND Quit {
+}
+[1751278005.788][INFO]: [320123768952bf65e3e54cd131ffab34] RESPONSE Quit
+[1751278005.788][DEBUG]: Log type 'driver' lost 0 entries on destruction
+[1751278005.788][DEBUG]: Log type 'browser' lost 0 entries on destruction
