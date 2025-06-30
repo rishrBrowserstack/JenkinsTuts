@@ -16,7 +16,13 @@ pipeline {
 
                 echo "Result: ${currentBuild.result}"          // null, SUCCESS, FAILURE
                 echo "Build number: ${currentBuild.number}"    // e.g. 42
-                echo "Display name: ${currentBuild.displayName}"
+                echo "Display name: ${currentBuild.displayName}"    
+
+
+                // Accessing parameters passed during running job
+                echo "Username: ${params.USERNAME}"
+                echo "Environment: ${params.ENVIRONMENT}"
+                echo "Debug mode: ${params.DEBUG}"
             }
         }
     }
