@@ -48,6 +48,7 @@ pipeline {
                 echo 'Running Nightwatch + Cucumber tests...'
                 sh '''
                     # Run tests
+                    npm install
                     npx nightwatch
                 '''
             }
